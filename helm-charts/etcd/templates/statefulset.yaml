@@ -48,6 +48,7 @@ spec:
         fsGroup: {{ .Values.securityContext.fsGroup }}
         runAsUser: {{ .Values.securityContext.runAsUser }}
       {{- end }}
+      subdomain: {{ include "etcd.fullname" . }}-headless
       {{- if and .Values.volumePermissions.enabled .Values.persistence.enabled }}
       initContainers:
         - name: volume-permissions
