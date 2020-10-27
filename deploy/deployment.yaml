@@ -15,7 +15,7 @@ spec:
       serviceAccountName: etcd-operator
       containers:
       - name: etcd-operator
-        image: gcr.io/codelity-co/etcd-operator:v0.1.0
+        image: gcr.io/codelity-co/etcd-operator:v0.3.0
         imagePullPolicy: Always
         env:
           - name: WATCH_NAMESPACE
